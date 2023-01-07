@@ -69,7 +69,5 @@ class WeatherData {
             weatherImage: AssetImage('assets/gunesli.png'));
       }
     }
-
-    throw (Error);
   }
 }
