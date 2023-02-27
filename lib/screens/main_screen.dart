@@ -88,12 +88,12 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               height: 95,
             ),
-            Container(
-              height: 400,
-              child: GoogleMap(
-                initialCameraPosition: initialCameraPosition,
-              ),
-            )
+            // Container(
+            //    height: 400,
+            //    child: GoogleMap(
+            //      initialCameraPosition: initialCameraPosition,
+            //    ),
+            //  )
           ],
         ),
       ),

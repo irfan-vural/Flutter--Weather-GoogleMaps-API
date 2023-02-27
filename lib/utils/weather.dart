@@ -33,7 +33,7 @@ class WeatherData {
         currentCondition = currentWeather['weather'][0]['id'];
         city = currentWeather['name'];
       } catch (e) {
-        print('hata burda');
+        print('hata var 1');
       }
     } else {
       print('apiden deger gelmedi');

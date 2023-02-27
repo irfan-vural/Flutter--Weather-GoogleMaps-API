@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:weather_app/screens/main_screen.dart';
 import 'package:weather_app/utils/location.dart';
@@ -18,9 +19,9 @@ class _LoadingScreenState extends State<LoadingScreen> {
     locationData = LocationHelper();
     await locationData.getCurrentLocation();
     if (locationData.latitude == null || locationData.longitude == null) {
-      print("konum bilgileri alinamadi");
+      debugPrint("konum bilgileri alinamadi");
     } else {
-      print(
+      debugPrint(
           'konum bilgileri geldi ${locationData.latitude.toString()} and ${locationData.longitude.toString()}');
     }
   }
