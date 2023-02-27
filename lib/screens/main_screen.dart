@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -88,6 +90,13 @@ class _MainScreenState extends State<MainScreen> {
             SizedBox(
               height: 95,
             ),
+            FloatingActionButton(onPressed: () {
+              FirebaseFirestore firestore = FirebaseFirestore.instance;
+              CollectionReference users =
+                  FirebaseFirestore.instance.collection('user');
+
+              users.add("data${hashCode}");
+            })
             // Container(
             //    height: 400,
             //    child: GoogleMap(
